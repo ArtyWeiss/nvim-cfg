@@ -22,3 +22,7 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 vim.keymap.set("n", "<leader>p", "\"+p")
 vim.keymap.set("v", "<leader>p", "\"+p")
 vim.keymap.set("n", "<leader>P", "\"+P")
+
+-- quickfix
+vim.keymap.set("n", "<A-]>", "<cmd>cnext<CR>zz")
+vim.keymap.set("n", "<A-[>", "<cmd>cprev<CR>zz")
