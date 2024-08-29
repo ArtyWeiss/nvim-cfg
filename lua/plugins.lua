@@ -55,6 +55,7 @@ local plugins = {
             vim.filetype.add({ extension = { frag = "glsl" } })
             vim.filetype.add({ extension = { vert = "glsl" } })
             vim.filetype.add({ extension = { glsl = "glsl" } })
+            vim.filetype.add({ extension = { tera = "rs" } })
 
             configs.setup({
                 ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html", "rust", "c_sharp", "glsl", "wgsl" },
