@@ -1,14 +1,29 @@
 local plugins = {
     ----  VISUALS ======================================================================
+--    {
+--        "ellisonleao/gruvbox.nvim",
+--        lazy = false,
+--        priority = 1000,
+--        config = function()
+--            require("gruvbox").setup({
+--                transparent_mode = true,
+--            })
+--            vim.cmd.colorscheme("gruvbox")
+--        end,
+--    },
     {
-        "ellisonleao/gruvbox.nvim",
-        lazy = false,
-        priority = 1000,
+        "rose-pine/neovim",
         config = function()
-            require("gruvbox").setup({
-                transparent_mode = true,
+            require('rose-pine').setup({
+                variant = "moon",
+                dark_variant = "moon",
+                styles = {
+                    bold = false,
+                    italic = false,
+                    transparency = true,
+                },
             })
-            vim.cmd.colorscheme("gruvbox")
+            vim.cmd.colorscheme('rose-pine')
         end,
     },
     {
@@ -17,7 +32,7 @@ local plugins = {
         config = function()
             require('lualine').setup({
                 options = {
-                    theme = 'gruvbox',
+                    theme = 'rose-pine',
                     component_separators = { left = '╱', right = '╲' },
                     section_separators = { left = '', right = '' },
                 },
