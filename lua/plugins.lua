@@ -73,7 +73,7 @@ local plugins = {
             vim.filetype.add({ extension = { tera = "rs" } })
 
             configs.setup({
-                ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html", "rust", "c_sharp", "glsl", "wgsl" },
+                ensure_installed = { "c", "cpp", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html", "rust", "c_sharp", "glsl", "wgsl" },
                 sync_install = false,
                 highlight = { enable = true },
                 indent = { enable = true },
@@ -143,6 +143,7 @@ local plugins = {
             vim.keymap.set('n', '<leader>fs', builtin.live_grep, {})
         end
     },
+
     -- GIT  ======================================================================
     {
         'tpope/vim-fugitive',
@@ -150,6 +151,7 @@ local plugins = {
             vim.keymap.set('n', '<leader>gg', vim.cmd.Git)
         end
     },
+
     -- LSP  ======================================================================
     { 'williamboman/mason.nvim' },
     { 'williamboman/mason-lspconfig.nvim' },
@@ -220,6 +222,7 @@ local plugins = {
             cfg.configure_servers()
         end
     },
+
     -- RUST  ======================================================================
     {
         'mrcjkb/rustaceanvim',

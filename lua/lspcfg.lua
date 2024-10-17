@@ -56,7 +56,7 @@ function cfg.configure_servers()
 
     require('mason').setup({})
     require('mason-lspconfig').setup({
-        ensure_installed = { 'lua_ls', 'rust_analyzer' },
+        ensure_installed = { 'lua_ls', 'rust_analyzer', 'clangd' },
         handlers = {
             default_setup,
             rust_analyzer = function() end,
