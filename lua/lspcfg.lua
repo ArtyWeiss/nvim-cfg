@@ -80,6 +80,14 @@ function cfg.configure_servers()
                     }
                 })
             end,
+            clangd = function ()
+                require('lspconfig').clangd.setup({
+                    capabilities = lsp_capabilities,
+                    on_attach = function (client)
+                        client.server_capabilities.semanticTokensProvider = nil
+                    end
+                })
+            end,
         },
     })
 end
